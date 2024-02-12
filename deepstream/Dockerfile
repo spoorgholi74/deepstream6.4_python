@@ -36,6 +36,8 @@ RUN cd /opt/nvidia/deepstream/deepstream/sources/ \
     && make -j$(nproc) \
     && pip3 install ./pyds-*.whl
 
+RUN pip3 install notebook
+
 # RTSP
 RUN apt-get install -y libgstrtspserver-1.0-0 gstreamer1.0-rtsp libgirepository1.0-dev gobject-introspection gir1.2-gst-rtsp-server-1.0
 

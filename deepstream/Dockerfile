@@ -3,8 +3,8 @@ FROM nvcr.io/nvidia/deepstream:6.4-samples-multiarch
 
 # To get video driver libraries at runtime (libnvidia-encode.so/libnvcuvid.so)
 ENV NVIDIA_DRIVER_CAPABILITIES $NVIDIA_DRIVER_CAPABILITIES,video
-ENV LOGLEVEL="INFO"
-ENV GST_DEBUG=2
+ENV LOGLEVEL="DEBUG"
+ENV GST_DEBUG=5
 ENV GST_DEBUG_FILE=/app/output/GST_DEBUG.log
 
 RUN apt update && apt install -y \
